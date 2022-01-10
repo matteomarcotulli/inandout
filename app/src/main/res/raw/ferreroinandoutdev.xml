@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="CatalogService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="HeaderLIL" EntityType="CatalogService.HeaderLIL"/>
+                <EntitySet Name="ElementBehaviour" EntityType="CatalogService.ElementBehaviour"/>
+            </EntityContainer>
+            <EntityType Name="HeaderLIL">
+                <Key>
+                    <PropertyRef Name="PRUEFLOS_InspectionLot"/>
+                    <PropertyRef Name="OBJNR_ObjectNumber"/>
+                    <PropertyRef Name="STAT_Status"/>
+                    <PropertyRef Name="STSMA_StatusProfile"/>
+                    <PropertyRef Name="ESTAT_UserStatus"/>
+                    <PropertyRef Name="SPRAS_Language"/>
+                </Key>
+                <Property Name="PRUEFLOS_InspectionLot" Type="Edm.String" MaxLength="12" Nullable="false"/>
+                <Property Name="OBJNR_ObjectNumber" Type="Edm.String" MaxLength="22" Nullable="false"/>
+                <Property Name="STAT_Status" Type="Edm.String" MaxLength="5" Nullable="false"/>
+                <Property Name="STSMA_StatusProfile" Type="Edm.String" MaxLength="8" Nullable="false"/>
+                <Property Name="ESTAT_UserStatus" Type="Edm.String" MaxLength="5" Nullable="false"/>
+                <Property Name="SPRAS_Language" Type="Edm.String" MaxLength="1" Nullable="false"/>
+                <Property Name="WERK_Plant" Type="Edm.String" MaxLength="4"/>
+                <Property Name="ZZMAT_MaterialClass" Type="Edm.String" MaxLength="2"/>
+                <Property Name="ZZSHIP_ShippingCondition" Type="Edm.String" MaxLength="20"/>
+                <Property Name="ZZDIRECTION_Direction" Type="Edm.String" MaxLength="1"/>
+                <Property Name="ERSTELDAT_CreatedOn" Type="Edm.String" MaxLength="8"/>
+                <Property Name="PASTRTERM_StartDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="PAENDTERM_EndDate" Type="Edm.String" MaxLength="8"/>
+            </EntityType>
+            <EntityType Name="ElementBehaviour">
+                <Key>
+                    <PropertyRef Name="Role"/>
+                    <PropertyRef Name="IWERK_Plant"/>
+                    <PropertyRef Name="Element"/>
+                </Key>
+                <Property Name="Role" Type="Edm.String" MaxLength="40" Nullable="false"/>
+                <Property Name="IWERK_Plant" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="Element" Type="Edm.String" MaxLength="200" Nullable="false"/>
+                <Property Name="Type" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Visible" Type="Edm.Boolean"/>
+                <Property Name="Mandatory" Type="Edm.Boolean"/>
+            </EntityType>
+            <Annotations Target="CatalogService.HeaderLIL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.EntityContainer/HeaderLIL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.ElementBehaviour" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.EntityContainer/ElementBehaviour" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

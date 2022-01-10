@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.headerlil.HeaderLILActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.entitycontainer.HeaderLIL" />
+        <variable name="headerLIL" type="HeaderLIL"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="PrueflosInspectionLot"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.prueflosInspectionLot).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ObjnrObjectNumber"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.objnrObjectNumber).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="StatStatus"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.statStatus).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="StsmaStatusProfile"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.stsmaStatusProfile).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="EstatUserStatus"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.estatUserStatus).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="SprasLanguage"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.sprasLanguage).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="WerkPlant"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.werkPlant).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ZzmatMaterialClass"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.zzmatMaterialClass).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ZzshipShippingCondition"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.zzshipShippingCondition).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ZzdirectionDirection"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.zzdirectionDirection).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ErsteldatCreatedOn"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.ersteldatCreatedOn).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="PastrtermStartDate"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.pastrtermStartDate).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="PaendtermEndDate"
+            app:valueText="@{headerLIL.getOptionalValue(HeaderLIL.paendtermEndDate).toString()}" />
+
+    </LinearLayout>
+</layout>

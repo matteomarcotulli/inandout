@@ -1,0 +1,8 @@
+<resources  xmlns:tools="http://schemas.android.com/tools"
+             tools:ignore="MissingTranslation" >
+    <string name="application_name">inandout</string>
+    <string name="eset_elementbehaviour">ElementBehaviour</string>
+    <string name="eset_elementbehaviour_single">ElementBehaviour</string>
+    <string name="eset_headerlil">HeaderLIL</string>
+    <string name="eset_headerlil_single">HeaderLIL</string>
+</resources>

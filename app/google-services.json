@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "252520840762",
+    "project_id": "ferreroinandout",
+    "storage_bucket": "ferreroinandout.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252520840762:android:15e7c38b2851455147bf03",
+        "android_client_info": {
+          "package_name": "com.ferrero.inandout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252520840762-h01i0no1fiun3hc6o4mvstmafne6ngbc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDwzFZU03HFoVIN7TqfvI1zjAqwN1TrZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252520840762-h01i0no1fiun3hc6o4mvstmafne6ngbc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

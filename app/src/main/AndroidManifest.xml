@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ferrero.inandout">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+            android:name=".app.SAPWizardApplication"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/application_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity
+            android:name=".app.WelcomeActivity"
+            android:theme="@style/splashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.MainBusinessActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+		<!-- this activity just provides a translucent background for the push message dialog -->
+        <activity android:name=".fcm.PushNotificationActivity"
+			android:configChanges="orientation|screenSize|screenLayout"
+            android:theme="@style/AppTheme.Transparent">
+        </activity>
+
+        <activity
+            android:name="com.sap.cloud.mobile.foundation.authentication.OtpResponseActivity"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="ferreroinandout.xcallbackurl" />
+            </intent-filter>
+        </activity>
+	</application>
+</manifest>

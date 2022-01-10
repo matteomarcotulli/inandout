@@ -1,0 +1,16 @@
+{
+  "projectInfo": {
+    "projectName": "inandout",
+    "createdDate": "Monday, January 10, 2022 at 10:31:58 AM",
+    "regenerateProxyClassDate": ""
+  },
+  "cloudApplication": {
+    "cloudApplicationId": "ferreroinandout",
+    "destinations": [
+      {
+        "id": "ferreroinandoutDev"
+      }
+    ]
+  },
+  "msServerConfigurationName": ""
+}
